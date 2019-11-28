@@ -1,6 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { TodoList } from './components/TodoList'
+import { Counter, MultiplierInput } from './components/Counter'
+import { SmartTodo } from './components/SmartTodo'
 
 const App: React.FC = () => {
   return (
@@ -10,17 +13,17 @@ const App: React.FC = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
       </header>
+      <SmartTodo />
+      <MultiplierInput>
+        <Counter />
+      </MultiplierInput>
+      <TodoList initialTodos={['Introduce MobX in React', 'Make a great app with MobX']} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
