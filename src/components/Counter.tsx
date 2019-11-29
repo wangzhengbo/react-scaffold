@@ -32,7 +32,7 @@ export const Counter = observer<Props>(({ multiplier = 1, initialCount = 0 }) =>
   )
 })
 
-export const MultiplierInput = ({ children }: { children?: React.ReactNode }) => {
+export const MultiplierInput = ({ children }: { children: (value: number) => React.ReactNode }) => {
   const [value, setValue] = React.useState(1)
   return (
     <div>
@@ -43,7 +43,7 @@ export const MultiplierInput = ({ children }: { children?: React.ReactNode }) =>
         style={{ textAlign: 'center' }}
         onChange={ev => setValue(parseInt(ev.target.value))}
       />
-      {children}
+      {children(value)}
     </div>
   )
 }

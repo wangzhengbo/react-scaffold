@@ -19,7 +19,7 @@ const App: React.FC = () => {
       </header>
       <SmartTodo />
       <MultiplierInput>
-        <Counter />
+        {multiplier => <Counter multiplier={multiplier} initialCount={1} />}
       </MultiplierInput>
       <TodoList initialTodos={['Introduce MobX in React', 'Make a great app with MobX']} />
     </div>
