@@ -7,7 +7,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write \"./**/*.{ts,tsx,js,json}\""
+    "format": "prettier --write \"./**/*.{ts,tsx,js,json}\"",
+    "ncu": "ncu",
+    "ncu:upgrade": "ncu -u"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +37,7 @@
     "@types/node": "~12.12.14",
     "@types/react": "~16.9.13",
     "@types/react-dom": "~16.9.4",
+    "npm-check-updates": "^3.2.2",
     "prettier": "~1.19.1",
     "react-scripts": "~3.2.0",
     "sass": "~1.23.7",
