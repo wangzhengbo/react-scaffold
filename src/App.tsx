@@ -4,6 +4,8 @@ import './App.css'
 import { TodoList } from './components/TodoList'
 import { Counter, MultiplierInput } from './components/Counter'
 import { SmartTodo } from './components/SmartTodo'
+import LifeCycleComponent from './components/LifeCycleComponent'
+import LifeCyclePureComponent from './components/LifeCyclePureComponent'
 
 const App: React.FC = () => {
   return (
@@ -22,6 +24,8 @@ const App: React.FC = () => {
         {multiplier => <Counter multiplier={multiplier} initialCount={1} />}
       </MultiplierInput>
       <TodoList initialTodos={['Introduce MobX in React', 'Make a great app with MobX']} />
+      <LifeCycleComponent name="LifeCycleComponentName" />
+      <LifeCyclePureComponent name="LifeCyclePureComponentName" />
     </div>
   )
 }
