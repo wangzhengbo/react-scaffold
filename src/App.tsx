@@ -4,8 +4,14 @@ import './App.css'
 import { TodoList } from './components/TodoList'
 import { Counter, MultiplierInput } from './components/Counter'
 import { SmartTodo } from './components/SmartTodo'
+import PotentialError from './components/PotentialError'
 import LifeCycleComponent from './components/LifeCycleComponent'
 import LifeCyclePureComponent from './components/LifeCyclePureComponent'
+import ForceUpdate from './components/ForceUpdate'
+import RefComponent from './components/RefComponent'
+import SetState from './components/SetState'
+import DefaultProps from './components/DefaultProps'
+import GetSnapshotBeforeUpdate from './components/GetSnapshotBeforeUpdate'
 
 const App: React.FC = () => {
   return (
@@ -24,8 +30,15 @@ const App: React.FC = () => {
         {multiplier => <Counter multiplier={multiplier} initialCount={1} />}
       </MultiplierInput>
       <TodoList initialTodos={['Introduce MobX in React', 'Make a great app with MobX']} />
-      <LifeCycleComponent name="LifeCycleComponentName" />
+      <PotentialError>
+        <LifeCycleComponent name="LifeCycleComponentName" />
+      </PotentialError>
       <LifeCyclePureComponent name="LifeCyclePureComponentName" />
+      <ForceUpdate />
+      <RefComponent />
+      <SetState />
+      <DefaultProps />
+      <GetSnapshotBeforeUpdate message="hello" />
     </div>
   )
 }

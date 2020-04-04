@@ -5,7 +5,8 @@ type Props = {
 }
 
 type State = {
-    age: number
+    age: number,
+    func?: () => string
 }
 
 export default class LifiCycleComponent extends React.Component<Props, State> {
@@ -15,7 +16,10 @@ export default class LifiCycleComponent extends React.Component<Props, State> {
         console.log('#LifiCycleComponent#props', props)
 
         this.state = {
-            age: 0
+            age: 0,
+            func: () => {
+                return 'test func'
+            }
         }
 
         setTimeout(() => {
@@ -29,6 +33,12 @@ export default class LifiCycleComponent extends React.Component<Props, State> {
                 age: 40
             })
         }, 4000)
+
+        setTimeout(() => {
+            this.setState({
+                func: null
+            })
+        }, 6000)
     }
 
     componentWillMount() {
@@ -68,8 +78,16 @@ export default class LifiCycleComponent extends React.Component<Props, State> {
         console.log('#LifiCycleComponent#componentDidUpdate')
     }
 
+    componentDidCatch(error, errorInfo) {
+        console.log('#LifiCycleComponent#componentDidCatch', error, errorInfo)
+    }
+
     render() {
         console.log('#LifiCycleComponent#render')
+
+        // if (!this.state.func) {
+        //     throw new Error('no this.state.func')
+        // }
 
         return (
             <div>
@@ -79,6 +97,9 @@ export default class LifiCycleComponent extends React.Component<Props, State> {
                 </div>
                 <div>
                     Age: { this.state.age }
+                </div>
+                <div>
+                    Func: { this.state.func() }
                 </div>
             </div>
         )
