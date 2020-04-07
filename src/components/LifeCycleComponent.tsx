@@ -9,11 +9,11 @@ type State = {
     func?: () => string
 }
 
-export default class LifiCycleComponent extends React.Component<Props, State> {
+export default class LifeCycleComponent extends React.Component<Props, State> {
     constructor(props) {
         super(props)
-        console.log('#LifiCycleComponent#constructor')
-        console.log('#LifiCycleComponent#props', props)
+        console.log('#LifeCycleComponent#constructor')
+        console.log('#LifeCycleComponent#props', props)
 
         this.state = {
             age: 0,
@@ -42,26 +42,26 @@ export default class LifiCycleComponent extends React.Component<Props, State> {
     }
 
     componentWillMount() {
-        console.log('#LifiCycleComponent#componentWillMount')
+        console.log('#LifeCycleComponent#componentWillMount')
     }
 
     componentDidMount() {
-        console.log('#LifiCycleComponent#componentDidMount')
+        console.log('#LifeCycleComponent#componentDidMount')
     }
 
     componentWillUnmount() {
-        console.log('#LifiCycleComponent#componentWillUnmount')
+        console.log('#LifeCycleComponent#componentWillUnmount')
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('#LifiCycleComponent#componentWillReceiveProps', arguments)
+        console.log('#LifeCycleComponent#componentWillReceiveProps', arguments)
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log('#LifiCycleComponent#shouldComponentUpdate')
-        console.log('#LifiCycleComponent#nextProps', nextProps)
-        console.log('#LifiCycleComponent#nextState', nextState)
-        console.log('#LifiCycleComponent#nextContext', nextContext)
+        console.log('#LifeCycleComponent#shouldComponentUpdate')
+        console.log('#LifeCycleComponent#nextProps', nextProps)
+        console.log('#LifeCycleComponent#nextState', nextState)
+        console.log('#LifeCycleComponent#nextContext', nextContext)
 
         if (nextState.age < 30) {
             return false
@@ -71,19 +71,19 @@ export default class LifiCycleComponent extends React.Component<Props, State> {
     }
 
     componentWillUpdate() {
-        console.log('#LifiCycleComponent#componentWillUpdate')
+        console.log('#LifeCycleComponent#componentWillUpdate')
     }
 
     componentDidUpdate() {
-        console.log('#LifiCycleComponent#componentDidUpdate')
+        console.log('#LifeCycleComponent#componentDidUpdate')
     }
 
     componentDidCatch(error, errorInfo) {
-        console.log('#LifiCycleComponent#componentDidCatch', error, errorInfo)
+        console.log('#LifeCycleComponent#componentDidCatch', error, errorInfo)
     }
 
     render() {
-        console.log('#LifiCycleComponent#render')
+        console.log('#LifeCycleComponent#render')
 
         // if (!this.state.func) {
         //     throw new Error('no this.state.func')
@@ -91,7 +91,7 @@ export default class LifiCycleComponent extends React.Component<Props, State> {
 
         return (
             <div>
-                LifiCycleComponent
+                LifeCycleComponent
                 <div>
                     Name: { this.props.name }
                 </div>

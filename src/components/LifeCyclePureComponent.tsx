@@ -8,11 +8,11 @@ type State = {
     age: number
 }
 
-export default class LifiCyclePureComponent extends React.PureComponent<Props, State> {
+export default class LifeCyclePureComponent extends React.PureComponent<Props, State> {
     constructor(props) {
         super(props)
-        console.log('#LifiCyclePureComponent#constructor')
-        console.log('#LifiCyclePureComponent#props', props)
+        console.log('#LifeCyclePureComponent#constructor')
+        console.log('#LifeCyclePureComponent#props', props)
 
         this.state = {
             age: 0
@@ -32,35 +32,35 @@ export default class LifiCyclePureComponent extends React.PureComponent<Props, S
     }
 
     componentWillMount() {
-        console.log('#LifiCyclePureComponent#componentWillMount')
+        console.log('#LifeCyclePureComponent#componentWillMount')
     }
 
     componentDidMount() {
-        console.log('#LifiCyclePureComponent#componentDidMount')
+        console.log('#LifeCyclePureComponent#componentDidMount')
     }
 
     componentWillUnmount() {
-        console.log('#LifiCyclePureComponent#componentWillUnmount')
+        console.log('#LifeCyclePureComponent#componentWillUnmount')
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('#LifiCyclePureComponent#componentWillReceiveProps', arguments)
+        console.log('#LifeCyclePureComponent#componentWillReceiveProps', arguments)
     }
 
     componentWillUpdate() {
-        console.log('#LifiCyclePureComponent#componentWillUpdate')
+        console.log('#LifeCyclePureComponent#componentWillUpdate')
     }
 
     componentDidUpdate() {
-        console.log('#LifiCyclePureComponent#componentDidUpdate')
+        console.log('#LifeCyclePureComponent#componentDidUpdate')
     }
 
     render() {
-        console.log('#LifiCyclePureComponent#render')
+        console.log('#LifeCyclePureComponent#render')
 
         return (
             <div>
-                LifiCyclePureComponent
+                LifeCyclePureComponent
                 <div>
                     Name: { this.props.name }
                 </div>

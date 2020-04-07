@@ -12,6 +12,7 @@ import RefComponent from './components/RefComponent'
 import SetState from './components/SetState'
 import DefaultProps from './components/DefaultProps'
 import GetSnapshotBeforeUpdate from './components/GetSnapshotBeforeUpdate'
+import ContextComponent from './components/ContextComponent'
 
 const App: React.FC = () => {
   return (
@@ -39,6 +40,7 @@ const App: React.FC = () => {
       <SetState />
       <DefaultProps />
       <GetSnapshotBeforeUpdate message="hello" />
+      <ContextComponent messages={[{text: 'message 1'}, {text: 'message 2'}]} />
     </div>
   )
 }

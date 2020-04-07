@@ -24,10 +24,11 @@ export default class GetSnapshotBeforeUpdate extends React.Component<Props, Stat
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log('#GetSnapshotBeforeUpdate#getSnapshotBeforeUpdate', prevProps, prevState)
+        return 'snapshot value'
     }
 
-    componentDidUpdate() {
-        console.log('#GetSnapshotBeforeUpdate#componentDidUpdate')
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('#GetSnapshotBeforeUpdate#componentDidUpdate', snapshot)
     }
 
     render() {
